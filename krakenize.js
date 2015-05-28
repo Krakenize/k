@@ -37,7 +37,7 @@ $kdb = (function() {
     _data = "";
     for (j = 0, len = keys.length; j < len; j++) {
       i = keys[j];
-      _data += encodeURIComponent(i) + "=" + encodeURIComponent(data[i]);
+      _data += encodeURIComponent(i) + "=" + encodeURIComponent(data[i])+"&";
     }
     data = _data.slice(0, -1);
     return this.helper("POST", data, next);
@@ -61,7 +61,7 @@ $kdb = (function() {
     _data = "";
     for (j = 0, len = keys.length; j < len; j++) {
       i = keys[j];
-      _data += encodeURIComponent(i) + "=" + encodeURIComponent(data[i]);
+      _data += encodeURIComponent(i) + "=" + encodeURIComponent(data[i])+"&";
     }
     data = _data.slice(0, -1);
     return this._helper("POST", data);
